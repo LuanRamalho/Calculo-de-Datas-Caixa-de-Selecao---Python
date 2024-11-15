@@ -60,13 +60,8 @@ combo_data2 = ttk.Combobox(root, values=lista_datas, font=("Arial", 12), width=2
 combo_data2.pack(pady=5)
 combo_data2.set(lista_datas[1])  # Definindo um valor padrão
 
-botao_calcular = ttk.Button(root, text="Calcular Diferença", command=calcular_diferenca, style="TButton")
+botao_calcular = tk.Button(root, text="Calcular Diferença", command=calcular_diferenca, font=("Arial", 12, "bold"), bg="darkgreen", fg="snow")
 botao_calcular.pack(pady=15)
-
-# Definindo o estilo do botão
-style = ttk.Style()
-style.configure("TButton", font=("Arial", 12), background="#4CAF50", foreground="purple")
-style.map("TButton", background=[("active", "#45a049")])
 
 resultado_var = tk.StringVar()
 label_resultado = ttk.Label(root, textvariable=resultado_var, background="#F0F8FF", font=("Arial", 12, "bold"), foreground="#333333")
